@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-title">
+                <img src="icons/icon48.png" alt="Logo" class="logo">
+                <h1>Bulk Indexer</h1>
+            </div>
+            <span class="status-badge" id="status-badge">Idle</span>
+        </header>
+
+        <div class="input-group">
+            <label for="url-list">URLs to Index (one per line)</label>
+            <textarea id="url-list" placeholder="https://example.com/page1&#10;https://example.com/page2"></textarea>
+        </div>
+
+        <div class="controls">
+            <div class="delay-control">
+                <label for="delay-sec">Delay (s)</label>
+                <input type="number" id="delay-sec" value="15" min="5" max="120">
+            </div>
+            <button id="btn-start" class="btn btn-primary">Start</button>
+            <button id="btn-stop" class="btn btn-danger" disabled>Stop</button>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-header">
+                <span>Progress</span>
+                <span id="progress-text">0 / 0</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="log-section">
+            <label>Logs</label>
+            <div id="logs" class="logs"></div>
+        </div>
+
+        <a href="https://27jobs.net/shery" target="_blank" class="promo-banner">
+            <div class="promo-content">
+                <span class="slide">Need Custom Automation?</span>
+                <span class="slide">Hire a Vibe Software Dev</span>
+                <span class="slide">Professional App Developer</span>
+            </div>
+            <div class="promo-action">
+                Click Here <span class="arrow">→</span>
+            </div>
+        </a>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
